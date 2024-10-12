@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile Settings</a>
+        <a href="convert.html">Convert Currency</a>
+        <a href="feedback.html">Feedback & Suggestions</a>
+        <a href="visualize.html">Data Visualization</a>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <!-- Container for Main Content -->
+    <div class="container">
+        <!-- Form Box for Adding Transactions -->
+        <div class="form-box">
+            <h1>Expense Calculator</h1>
+            <form id="transactionForm">
+                <input type="text" id="description" name="description" placeholder="Description" required>
+                <input type="number" id="amount" name="amount" placeholder="Amount" step="0.01" required min="0">
+                <select id="type" name="type" required>
+                    <option value="" disabled selected>Type</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+                <p id="form-error" class="error-message"></p>
+            </form>
+        </div>
+
+        <!-- Summary Box for displaying Income, Expenses, and Remaining Amount -->
+        <div class="summary-box">
+            <h2>Summary</h2>
+            <div class="summary-item" id="incomeTotal">
+                <span>Income:</span> <span>₹0.00</span>
+            </div>
+            <div class="summary-item" id="expenseTotal">
+                <span>Expenses:</span> <span>₹0.00</span>
+            </div>
+            <div class="summary-item" id="remainingAmount">
+                <span>Remaining:</span> <span>₹0.00</span>
+            </div>
+        </div>
+
+        <!-- History Box for displaying Transactions -->
+        <div class="history-box">
+            <h2>Transaction History</h2>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transactions will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="logout.js"></script> 
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile Settings</a>
+        <a href="convert.html">Convert Currency</a>
+        <a href="feedback.html">Feedback & Suggestions</a>
+        <a href="visualize.html">Data Visualization</a>
+    </div>
+
+    <!-- Container for Main Content -->
+    <div class="container">
+        <h1>Data Visualization</h1>
+
+        <!-- Dropdown for Chart Type Selection -->
+        <div class="dropdown">
+            <label for="chartType">Select Chart Type:</label>
+            <select id="chartType">
+                <option value="bar">Bar Chart</option>
+                <option value="line">Line Chart</option>
+                <option value="pie">Pie Chart</option>
+            </select>
+        </div>
+
+        <!-- Canvas for Chart -->
+        <canvas id="summaryChart" width="400" height="200"></canvas>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="downloadChart">Download Chart</button>
+            <a href="home.html" id="backButton">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="visualize.js"></script>
+</body>
+</html>
